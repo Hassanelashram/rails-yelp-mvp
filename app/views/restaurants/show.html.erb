@@ -1,0 +1,24 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="row">
+        <h2 class="col-12">Name: <%= @restaurant.name %></h2>
+        <p class="col-12">Address: <%= @restaurant.address %></p>
+        <p class="phone_number col-12">Phone: <%=  @restaurant.phone_number %></p>
+    </div>
+  </div>
+  <div class="col">
+    map
+  </div>
+</div>
+
+
+
+  <h2>Reviews <%= link_to 'Add a review', new_restaurant_review_path(@restaurant) %></h2>
+  <% @restaurant.reviews.each do |r| %>
+     <hr>
+     <p>Rating: <%= r.rating %> Stars - Review: <br> <%= r.content %></p>
+     <hr>
+  <% end %>
+</div>

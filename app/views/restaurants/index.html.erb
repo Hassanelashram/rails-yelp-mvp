@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <% @restaurants.each do |r| %>
+      <div class="col-4 mx-auto text-center">
+        <div class="card my-5">
+          <h2> <%= link_to r.name, r %> </h2>
+          <p> <%= r.reviews.count %> Reviews </p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
